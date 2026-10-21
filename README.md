@@ -20,7 +20,7 @@ Feito com Tauri v2 (Rust) + Vite/TypeScript sem framework.
 
 Em Configurações → Rede, o campo **Nome na rede** (só letras minúsculas, números e hífen; vazio = desligado) publica um nome extra, por exemplo `painel-app.local`, apontando para o IP da LAN. Assim os colegas abrem `http://painel-app.local:4747/` em vez de decorar o IP. O **Copiar .local** dos projetos passa a usar esse nome enquanto ele estiver publicado.
 
-- **Nada do sistema muda**: o hostname (`NF-ENG-Sergio`) e a configuração de rede continuam iguais, e `NF-ENG-Sergio.local` segue funcionando. Não precisa de sudo.
+- **Nada do sistema muda**: o hostname da máquina (ex.: `meu-notebook`) e a configuração de rede continuam iguais, e `meu-notebook.local` segue funcionando. Não precisa de sudo.
 - Funciona com `avahi-publish -a -R <nome>.local <ip>` (pacote `avahi`, daemon ativo). O processo filho morre junto com o app (Sair, fechar a sessão, SIGTERM ou SIGKILL), então **o nome extra só existe com o Porteiro aberto**. Recomendo iniciar com o sistema com `--oculto` (veja a seção do niri).
 - Se o IP da LAN mudar, o nome é republicado no IP novo. Se o nome mudar, o antigo sai e o novo entra.
 - Se outro aparelho da rede já usa o nome, aparece “painel-app.local já está em uso na rede” em Configurações e o app tenta de novo a cada 30 s. Erros do avahi também aparecem lá.
