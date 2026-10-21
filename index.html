@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Porteiro</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header class="topo">
+      <div class="marca">
+        <button class="voltar" id="btn-voltar" title="Voltar" hidden>←</button>
+        <h1 id="titulo">Porteiro</h1>
+        <span class="resumo" id="resumo"></span>
+      </div>
+      <div class="acoes-topo">
+        <button class="primario" id="btn-adicionar">+ Adicionar</button>
+        <button class="icone" id="btn-config" title="Configurações" aria-label="Configurações">⚙</button>
+      </div>
+    </header>
+    <main id="app"></main>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

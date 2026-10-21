@@ -1,0 +1,25 @@
+{
+  "name": "porteiro",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "tauri": "tauri",
+    "icons": "bash scripts/gerar-icones.sh",
+    "appimage": "NO_STRIP=true tauri build --bundles appimage",
+    "dump": "cargo run --quiet --manifest-path src-tauri/Cargo.toml -- --dump"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.12.4",
+    "@tauri-apps/plugin-clipboard-manager": "^2.5.0",
+    "@tauri-apps/plugin-notification": "^2.7.0",
+    "@tauri-apps/plugin-opener": "^2.7.2"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.12.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  }
+}
